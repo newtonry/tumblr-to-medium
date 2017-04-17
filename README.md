@@ -21,7 +21,7 @@ Now I had the links. How was I going to import them? It would be a pain to manua
 
 There were a few limations that I encountered during this part of the process:
 - The first was that you needed a XSRF token from Medium. However, this was easy enough to get by looking at the Network tab of the inspector.
-![xsrf](./xsrf_token.png)
+![xsrf](images/xsrf_token.png)
 - The biggest limitation is that Medium limits you to posting a max of 15 articles a day, hence the entire migration process will take a 6 days for my 81 posts.
 - Medium's import is not always 100% accurate, so it's additional work to groom the posts.
 - Original publish dates are not included in the imports. They may or may not be relevant to your content.
