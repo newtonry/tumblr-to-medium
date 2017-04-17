@@ -23,4 +23,4 @@ There were a few limations that I encountered during this part of the process:
 - Medium's import is not always 100% accurate, so it's additional work to groom the posts.
 - Original publish dates are not included in the imports. They may or may not be relevant to your content.
 
-Anyways, it will be nice to be on a more appropriate blogging platform now. Feel free to try running `convert_posts` yourself!
+Anyways, it will be nice to be on a more appropriate blogging platform now. Feel free to try running `convert_posts.py` yourself!
