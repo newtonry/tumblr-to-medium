@@ -11,13 +11,10 @@ Hence, I decided to try and automate the migration process as much as possible. 
 
 
 ### Fetching existing posts
-Medium's import tool consumes links, so I needed to acquire the links for all my tumblr posts. Luckily they have a [basic api](https://www.tumblr.com/docs/en/api/v1). I used the XML format, which was easy enough to parse with python's `xml.etree.ElementTree`. A common 'issue' with APIs is the limit to the number of items returned per request. However, this is easy enough to solve by writing a script that hits the endpoint then paginates until there are no long any results.
-
-(link to tumblr code)
-
+Medium's import tool consumes links, so I needed to acquire the links for all my tumblr posts. Luckily they have a [basic api](https://www.tumblr.com/docs/en/api/v1). I used the XML format, which was easy enough to parse with python's `xml.etree.ElementTree`. A common 'issue' with APIs is the limit to the number of items returned per request. However, this is easy enough to solve by [writing a script](tumblr_read.py) that hits the endpoint then paginates until there are no long any results.
 
 ### Importing into Medium
-Now I had the links. How was I going to import them? It would be a pain to manually copy and paste a link into the Medium UI 81 times. My solution, still somewhat manual, was to open a browser with as many params already filled in. I took the way out and just opened Chrome with `os.system`. Alternative solutions might have been trying to use something like a webdriver to automate the Medium flow. However, that seemed a bit out of scope and manually reviewing the imported posts had value since Medium's import process isn't perfect and sometimes has mistakes or misformatting. You can take a look at that logic here (link to medium code).
+Now I had the links. How was I going to import them? It would be a pain to manually copy and paste a link into the Medium UI 81 times. My solution, still somewhat manual, was to open a browser with as many params already filled in. I took the way out and just opened Chrome with `os.system`. Alternative solutions might have been trying to use something like a webdriver to automate the Medium flow. However, that seemed a bit out of scope and manually reviewing the imported posts had value since Medium's import process isn't perfect and sometimes has mistakes or misformatting. You can take a look at that [logic here](medium_import.py).
 
 There were a few limations that I encountered during this part of the process:
 - The first was that you needed a XSRF token from Medium. However, this was easy enough to get by looking at the Network tab of the inspector.
