@@ -22,5 +22,7 @@ There were a few limations that I encountered during this part of the process:
 - The biggest limitation is that Medium limits you to posting a max of 15 articles a day, hence the entire migration process will take a 6 days for my 81 posts.
 - Medium's import is not always 100% accurate, so it's additional work to groom the posts.
 - Original publish dates are not included in the imports. They may or may not be relevant to your content.
+- There was one post which Medium could not import (I had to copy an paste manually). Unsurprisingly, the post (https://medium.com/@vonkunesnewton/bítly-expand-not-found-7580323e8dc6) is about issues with bitly not handling special characters. Seems like Medium has a similar issue.
+
 
 Anyways, it will be nice to be on a more appropriate blogging platform now. Feel free to try running `convert_posts.py` yourself!
